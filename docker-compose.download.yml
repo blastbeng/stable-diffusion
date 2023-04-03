@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  stable-diffusion-download:
+    container_name: stable-diffusion-download
+    build: ./services/download/
+    stop_signal: SIGINT
+    volumes:
+      - ./data:/data
